@@ -17,14 +17,14 @@ export default function AdivinaLaCarta() {
   const [reveladas, setReveladas] = useState<boolean>(false);
 
   const manejarClick = (carta: typeof cartas[0]) => {
-    if (resultado) return; // ya jugó
+    if (resultado) return;
     setCartaSeleccionadaId(carta.id);
     setReveladas(true);
 
     if (carta.id === cartaSecreta.id) {
       setResultado('🎉 ¡Correcto! Has adivinado la carta.');
     } else {
-      setResultado(`❌ Fallaste. Era la ${cartaSecreta.nombre} carta: `);
+      setResultado(`❌ Fallaste. Era la ${cartaSecreta.nombre} carta.`);
     }
   };
 
@@ -40,7 +40,7 @@ export default function AdivinaLaCarta() {
       <h1>🎴 Adivina la Carta</h1>
       <p>Haz clic en una carta para adivinar cuál es la correcta.</p>
 
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem' }}>
+      <div className="contenedor-cartas">
         {cartas.map((carta) => {
           const mostrarCarta = reveladas || cartaSeleccionadaId === carta.id;
           return (
@@ -84,6 +84,19 @@ export default function AdivinaLaCarta() {
           </button>
         </div>
       )}
+
+      {/* Estilos corregidos */}
+      <style jsx>{`
+        .contenedor-cartas {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 2rem;
+          flex-wrap: wrap;
+        }
+      `}</style>
     </div>
   );
 }
