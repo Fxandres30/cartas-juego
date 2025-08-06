@@ -3,9 +3,9 @@
 import { useState } from 'react';
 
 const cartas = [
-  { id: 1, nombre: '1', imagen: '/cartas/carta1.jpg' },
-  { id: 2, nombre: '2', imagen: '/cartas/carta2.jpg' },
-  { id: 3, nombre: '3', imagen: '/cartas/carta3.jpg' },
+  { id: 1, nombre: 'primer', imagen: '/cartas/carta1.jpg' },
+  { id: 2, nombre: 'segunda', imagen: '/cartas/carta2.jpg' },
+  { id: 3, nombre: 'tercera', imagen: '/cartas/carta3.jpg' },
 ];
 
 export default function AdivinaLaCarta() {
@@ -24,7 +24,7 @@ export default function AdivinaLaCarta() {
     if (carta.id === cartaSecreta.id) {
       setResultado('🎉 ¡Correcto! Has adivinado la carta.');
     } else {
-      setResultado(`❌ Fallaste. La carta era: ${cartaSecreta.nombre}`);
+      setResultado(`❌ Fallaste. Era la ${cartaSecreta.nombre} carta: `);
     }
   };
 
