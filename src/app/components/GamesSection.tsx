@@ -3,19 +3,19 @@
 const games = [
   {
     id: 1,
-    title: 'Combinación 3 Cifras',
+    title: 'Adivina la Carta',
     image: '/juegos/juego1.jpg',
     link: '/juegos/adivina-la-carta', // Este va al juego correcto
   },
   {
     id: 2,
-    title: 'Desafío Numérico',
+    title: 'En proceso',
     image: '/juegos/juego2.jpg',
     link: '/juegos/desafio-numerico',
   },
   {
     id: 3,
-    title: 'Código Misterioso',
+    title: 'En proceso',
     image: '/juegos/juego3.jpg',
     link: '/juegos/codigo-misterioso',
   },
