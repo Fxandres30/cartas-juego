@@ -1,0 +1,61 @@
+.juego {
+  text-align: center;
+  padding: 2rem;
+}
+
+.contenedor-cartas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.carta {
+  flex: 1 1 auto;
+  max-width: 33.33%;       /* Nunca más de 1/3 del ancho total */
+  height: auto;
+    max-width: 200px;     /* 🔒 tamaño máximo absoluto */
+
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  object-fit: contain;
+}
+
+.carta:hover {
+  transform: scale(1.05);
+}
+
+.cartaSeleccionada {
+  border: 4px solid #007bff;
+}
+
+.resultado {
+  margin-top: 2rem;
+}
+
+.resultado p {
+  font-size: 1.2rem;
+}
+
+.resultado button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🪄 RESPONSIVE — asegura que en pantallas pequeñas sigan lado a lado */
+@media (max-width: 400px) {
+  .carta {
+    max-width: 30%;
+  }
+}
